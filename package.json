@@ -1,0 +1,27 @@
+{
+  "name": "jukebox-js-libs",
+  "version": "0.0.0",
+  "description": "Librairies et utilitaires pour générer des applications jukebox electron",
+  "main": "main.js",
+  "scripts": {
+  },
+  "repository": "https://github.com/davidmars/jukebox-js-libs",
+  "keywords": [
+    "jukeboxvr",
+    "cayceo",
+    "virtual reality",
+    "vr"
+  ],
+  "author": "davidmars",
+  "license": "CC0-1.0",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "adbkit": "^2.11.0",
+    "event-emitter-es6": "^1.1.5",
+    "express": "^4.15.2",
+    "jquery": "^3.3.1",
+    "rimraf": "^2.6.2",
+    "socket.io": "^2.1.1"
+  }
+}
