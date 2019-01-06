@@ -65,6 +65,11 @@ class CasqueModel {
          * @type {boolean}
          */
         this.isSyncro=false;
+        /**
+         * true si un ou des fichiers sont en cours de copie
+         * @type {boolean}
+         */
+        this.isSynchroBusy=false;
     }
 }
 module.exports = CasqueModel;
