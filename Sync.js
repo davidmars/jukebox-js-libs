@@ -172,15 +172,17 @@ class Sync extends EventEmitter{
         let me=this;
 
         //dwd apk
-        me.data.json.casquesapk.localPathAboslute=this.localStoragePath+"/"+ me.data.json.casquesapk.localFile;
-        let distApk=me.data.json.casquesapk.serverFile;
-        FileSystemUtils.ensureDirectoryExistence(me.data.json.casquesapk.localPathAboslute);
-        if(!fs.existsSync(me.data.json.casquesapk.localPathAboslute)){
-            this.emit(EVENT_DOWNLOADING,"apk " + distApk);
-            FileSystemUtils.download(distApk,me.data.json.casquesapk.localPathAboslute,function(){
-                me.dwdNext();
-            });
-            return;
+        if(e.data.json.casquesapk.localFile){
+            me.data.json.casquesapk.localPathAboslute=this.localStoragePath+"/"+ me.data.json.casquesapk.localFile;
+            let distApk=me.data.json.casquesapk.serverFile;
+            FileSystemUtils.ensureDirectoryExistence(me.data.json.casquesapk.localPathAboslute);
+            if(!fs.existsSync(me.data.json.casquesapk.localPathAboslute)){
+                this.emit(EVENT_DOWNLOADING,"apk " + distApk);
+                FileSystemUtils.download(distApk,me.data.json.casquesapk.localPathAboslute,function(){
+                    me.dwdNext();
+                });
+                return;
+            }
         }
 
         //dwd logo
