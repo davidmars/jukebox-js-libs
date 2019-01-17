@@ -172,7 +172,7 @@ class Sync extends EventEmitter{
         let me=this;
 
         //dwd apk
-        if(me.data.json.casquesapk.localFile){
+        if(me.data.json.casquesapk && me.data.json.casquesapk.localFile){
             me.data.json.casquesapk.localPathAboslute=this.localStoragePath+"/"+ me.data.json.casquesapk.localFile;
             let distApk=me.data.json.casquesapk.serverFile;
             FileSystemUtils.ensureDirectoryExistence(me.data.json.casquesapk.localPathAboslute);
